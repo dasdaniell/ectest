@@ -1,0 +1,13 @@
+nav {
+    margin: 30px;
+
+    span {
+        margin-left: 30px;
+        color: #4DB6AC;
+        cursor: pointer;
+
+        &:hover {
+            color: #00897B;
+        }
+    }
+}

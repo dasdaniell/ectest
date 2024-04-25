@@ -16,5 +16,6 @@ export class AppComponent {
   
   public ngOnInit() {
     this.router.navigate(['login']);
+    // this.router.navigate(['welcome']);
   }
 }

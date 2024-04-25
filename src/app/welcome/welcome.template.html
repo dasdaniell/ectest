@@ -1,12 +1,7 @@
-<p>
-welcome works!
-</p>
-
 <nav>
-    <ul>
-      <li><a routerLink="sales">Sales</a></li>
-      <li><a routerLink="new-product">New Product</a></li>
-    </ul>
-  </nav>
-  
-  <router-outlet></router-outlet>
+  <span (click)="goToRoute('sales')">Sales</span>
+  <span (click)="goToRoute('new-product')">New Product</span>
+</nav>
+
+
+<router-outlet></router-outlet>
