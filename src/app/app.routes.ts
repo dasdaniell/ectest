@@ -5,8 +5,16 @@ import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 export const routes: Routes = [
-    { path: 'login', component: LoginComponent },
-    { path: 'welcome', component: WelcomeComponent },
-    { path: 'new-product', component: NewProductComponent },
-    { path: 'sales', component: SalesComponent },
+    {
+        path: 'login',
+        component: LoginComponent
+    },
+    {
+        path: 'welcome', 
+        component: WelcomeComponent,
+        children: [
+            { path: 'new-product', component: NewProductComponent },
+            { path: 'sales', component: SalesComponent },
+        ]
+    },
 ];

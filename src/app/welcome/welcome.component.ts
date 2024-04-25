@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
   standalone: true,
-  imports: [],
+  imports: [RouterOutlet],
   templateUrl: "./welcome.template.html",
   styleUrl: './welcome.component.scss'
 })
@@ -16,7 +16,7 @@ export class WelcomeComponent {
   ) {}
 
   public ngOnInit() {
-    // this.router.navigate(['sales']);
+    this.router.navigate(['sales'], { relativeTo: this.route });
   }
 
 }
