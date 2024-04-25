@@ -1,10 +1,10 @@
 <div class="login-page">
     <div class="form">
       <form class="login-form">
-        <input type="email" placeholder="email"/>
-        <input type="password" placeholder="password"/>
-        <button (click)="valdiateCredentials()">login</button>
-        <span *ngIf="showValidationsError">Email or password is invalid.</span>
+        <input [(ngModel)]="emailAddress" type="email" placeholder="email" name="email"/>
+        <input [(ngModel)]="password" type="password" placeholder="password" name="password"/>
+        <button (click)="login()">login</button>
+        <span *ngIf="showValidationsError" class="valdiation-error-message">Email or password is invalid.</span>
         <p class="message">Not registered? <a href="#">Create an account</a></p>
       </form>
     </div>
